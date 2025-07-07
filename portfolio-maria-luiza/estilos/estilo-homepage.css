@@ -1,0 +1,91 @@
+/* Fonte padrão, fundo clarinho e texto escuro pra facilitar leitura */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh; /* Faz o body ocupar toda a altura da tela */
+  display: flex;
+  flex-direction: column; /* Organiza header, main e footer em coluna */
+}
+
+/* Cabeçalho com fundo roxo, texto branco e tudo centralizado */
+header {
+  background-color: #cf4ebc;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Menu: tira marcadores da lista e deixa os links na horizontal */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+
+  display: flex;
+  justify-content: center; /* Centraliza os links */
+  gap: 16px; /* Espaço entre eles */
+  flex-wrap: wrap; /* Quebra linha se precisar */
+}
+
+/* Estilo dos links do menu */
+nav a {
+  color: white;
+  text-decoration: none; /* Tira o sublinhado */
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 6px; /* Cantinho arredondado */
+}
+
+/* Efeito quando passa o mouse nos links */
+nav a:hover {
+  background-color: #9c358c;
+}
+
+/* Main cresce para preencher o espaço e tem padding */
+main {
+  flex-grow: 1; /* Faz o main crescer para ocupar o espaço disponível */
+  padding: 20px;
+}
+
+/* Container principal: deixa o conteúdo centralizado e espaçado */
+.container-principal {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: flex-start; /* Alinha o conteúdo no topo */
+  gap: 30px; /* Espaço entre os elementos */
+  padding: 20px;
+  flex-wrap: wrap; /* Permite que os itens quebrem linha em telas pequenas */
+}
+
+/* Caixa de apresentação com fundo rosa claro, bordas arredondadas e sombra suave */
+.caixa-apresentacao {
+  background-color: #fce6f4;
+  color: black;
+  max-width: 700px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  line-height: 1.6; /* Espaço entre as linhas do texto */
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Leve sombra no texto */
+  flex-grow: 1;
+  min-width: 300px; /* Pra não ficar muito pequena em telas grandes */
+}
+
+/* Responsividade pra telas menores que 900px */
+@media (max-width: 900px) {
+  .container-principal {
+    flex-direction: column; /* Empilha os itens */
+    align-items: center; /* Centraliza eles */
+  }
+  .caixa-apresentacao {
+    max-width: 90%; /* Usa quase toda largura da tela */
+  }
+}

@@ -1,0 +1,125 @@
+/* Configurações básicas: fonte, cor e fundo clarinho */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdf5fb;
+  color: #333;
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh; /* Faz o body ocupar toda a altura da tela */
+  display: flex;
+  flex-direction: column; /* Pra deixar header, main e footer empilhados */
+}
+
+/* Cabeçalho roxo com texto branco e tudo centralizado */
+header {
+  background-color: #cf4ebc;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Menu: lista horizontal, sem marcador e com espaçamento */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+
+  display: flex;
+  justify-content: center; /* Centraliza os links */
+  gap: 16px; /* Espaço entre os links */
+  flex-wrap: wrap; /* Quebra linha em telas pequenas */
+}
+
+/* Links do menu com cor branca, sem sublinhado e cantos arredondados */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease; /* Transição suave no hover */
+}
+
+/* Fundo do link muda ao passar o mouse */
+nav a:hover {
+  background-color: #9c358c;
+}
+
+/* Main que cresce pra preencher espaço, com padding e centralizado */
+main {
+  flex-grow: 1;
+  padding: 40px 20px;
+  max-width: 1000px; /* Limita o tamanho máximo da área principal */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Container que segura as duas caixas (texto e detalhes) lado a lado */
+.perfil-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite quebrar a linha se a tela for pequena */
+  gap: 30px; /* Espaço entre as caixas */
+  justify-content: center; /* Centraliza as caixas na tela */
+  align-items: flex-start; /* Alinha ao topo */
+}
+
+/* Caixa do texto e detalhes com fundo rosa claro, sombra e cantos arredondados */
+.caixa-texto, .caixa-detalhes {
+  background-color: #fce6f4;
+  color: black;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra suave no texto */
+  flex: 1 1 300px; /* Flexível, mas no mínimo 300px */
+  min-width: 280px;
+  max-width: 450px;
+  line-height: 1.6; /* Espaço entre linhas */
+}
+
+/* Título das listas com cor diferente e sem margem superior */
+.caixa-detalhes h2 {
+  margin-top: 0;
+  color: #af4ca0;
+}
+
+/* Remove marcadores da lista */
+.caixa-detalhes ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Cada item da lista tem um espaçamento e ícone antes */
+.caixa-detalhes li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 24px; /* Espaço para o ícone */
+}
+
+/* Ícone florzinha antes de cada item da lista */
+.caixa-detalhes li::before {
+  content: "🌸";
+  position: absolute;
+  left: 0;
+}
+
+/* Rodapé simples escuro e texto claro, centralizado */
+footer {
+  background-color: #333;
+  color: #ccc;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Responsividade: em telas menores, as caixas ficam empilhadas */
+@media (max-width: 768px) {
+  .perfil-container {
+    flex-direction: column; /* Empilha verticalmente */
+    align-items: center; /* Centraliza */
+  }
+}

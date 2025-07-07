@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" /> <!-- Pra garantir que os caracteres especiais funcionem certinho -->
+  <title>Contato - Maria Luiza</title> <!-- O título que aparece lá na aba do navegador -->
+  <link rel="stylesheet" href="../estilos/estilo-contato.css" /> <!-- Puxando o CSS que vai deixar a página bonita -->
+</head>
+<body>
+  <header>
+    <h1>Vamos Conversar? 💬</h1> <!-- Um convite pra pessoa entrar em contato -->
+    <nav>
+      <ul>
+        <!-- Menu simples pra navegar entre as páginas -->
+        <li><a href="homepage.html">Início</a></li>
+        <li><a href="formacao.html">Formação</a></li>
+        <li><a href="sobremim.html">Sobre Mim</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container-principal">
+      <!-- Pequeno texto que explica o propósito da página -->
+      <p class="intro">Quer trocar uma ideia, sugerir um projeto ou só dizer oi? Aqui é o lugar! 💖</p>
+
+      <!-- Formulário pra galera enviar mensagem direto -->
+      <form action="#" method="post" class="form-contato">
+        <!-- Campo pra pessoa colocar o nome -->
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+
+        <!-- Campo pra email, já com validação básica -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required />
+
+        <!-- Caixa de texto pra mensagem -->
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui..." required></textarea>
+
+        <!-- Botão pra enviar o formulário -->
+        <button type="submit" class="btn-enviar">Enviar ✉️</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Rodapé com direitos autorais -->
+    <p>© 2025 Maria Luiza - Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>

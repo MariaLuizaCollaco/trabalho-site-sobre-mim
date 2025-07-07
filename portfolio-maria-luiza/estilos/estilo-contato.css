@@ -1,0 +1,142 @@
+/* Fonte básica, cor de fundo clara, texto escuro e layout pra coluna */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh; /* Faz o corpo ocupar a altura inteira da tela */
+  display: flex;
+  flex-direction: column; /* Pra organizar header, main e footer em coluna */
+}
+
+/* Cabeçalho com fundo roxinho, texto branco e centralizado */
+header {
+  background-color: #cf4ebc;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Tirando os marcadores da lista e deixando os itens na horizontal */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+
+  display: flex;
+  justify-content: center; /* Centraliza os links */
+  gap: 16px; /* Espaço entre cada link */
+  flex-wrap: wrap; /* Quebra a linha se a tela for muito pequena */
+}
+
+/* Estilo dos links do menu */
+nav a {
+  color: white;
+  text-decoration: none; /* Tira o sublinhado */
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 6px; /* Borda arredondada */
+}
+
+/* Cor de fundo diferente quando passar o mouse em cima do link */
+nav a:hover {
+  background-color: #9c358c;
+}
+
+/* Main ocupa o espaço disponível, com padding e centraliza o conteúdo */
+main {
+  flex-grow: 1; /* Faz o main crescer pra preencher espaço */
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Caixa principal do formulário, com fundo rosa claro e cantos arredondados */
+.container-principal {
+  background-color: #fce6f4;
+  padding: 25px 30px;
+  border-radius: 12px;
+  max-width: 400px; /* Limita a largura máxima */
+  width: 100%; /* Responsivo pra telas pequenas */
+  box-sizing: border-box; /* Inclui padding dentro da largura */
+  text-align: center;
+}
+
+/* Texto introdutório com cor e espaço embaixo */
+.intro {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Label fica em bloco, em negrito e alinhado à esquerda */
+form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  text-align: left;
+  color: #222;
+}
+
+/* Campos de texto e área de texto com largura total e padding */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  resize: vertical; /* Deixa o textarea redimensionável só na vertical */
+}
+
+/* Borda muda de cor quando o campo está selecionado */
+input:focus, textarea:focus {
+  border-color: #673ab7;
+}
+
+/* Botão com fundo roxo, texto branco e largura total */
+button.btn-enviar {
+  margin-top: 25px;
+  background-color: #cf4ebc;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 12px 0;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer; /* Muda o cursor pra indicar que é clicável */
+}
+
+/* Fundo do botão muda quando passa o mouse */
+button.btn-enviar:hover {
+  background-color: #9c358c;
+}
+
+/* Rodapé escuro com texto claro e centralizado */
+footer {
+  background-color: #333;
+  color: #ccc;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: normal;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 540px) {
+  .container-principal {
+    max-width: 90vw; /* Usa 90% da largura da tela */
+    padding: 20px;
+  }
+  nav ul {
+    gap: 12px; /* Espaço menor entre os links */
+  }
+}

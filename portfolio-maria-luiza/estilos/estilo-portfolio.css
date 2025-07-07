@@ -1,0 +1,93 @@
+/* Fonte padrão, fundo claro e texto escuro pra facilitar leitura */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh; /* Garante que o body ocupe a tela inteira */
+  display: flex;
+  flex-direction: column; /* Organiza header, main e footer em coluna */
+}
+
+/* Cabeçalho roxo com texto branco e centralizado */
+header {
+  background-color: #cf4ebc;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Lista do menu sem marcador e links na horizontal */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+
+  display: flex;
+  justify-content: center;
+  gap: 16px; /* Espaço entre os links */
+  flex-wrap: wrap; /* Quebra linha se necessário */
+}
+
+/* Estilo dos links do menu */
+nav a {
+  color: white;
+  text-decoration: none; /* Tira o sublinhado */
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease; /* Transição suave pra hover */
+}
+
+/* Fundo do link muda quando o mouse passa em cima */
+nav a:hover {
+  background-color: #9c358c;
+}
+
+/* Main ocupa espaço disponível e centraliza o conteúdo */
+main {
+  flex-grow: 1;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Caixa principal com fundo rosa claro, borda arredondada e sombra suave */
+.container-portfolio {
+  background-color: #fce6f4;
+  color: black;
+  padding: 25px 30px;
+  border-radius: 12px;
+  max-width: 600px; /* Limita a largura para não ficar gigante */
+  width: 100%; /* Responsivo pra telas menores */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  box-sizing: border-box; /* Inclui padding dentro da largura */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra leve no texto */
+}
+
+/* Ajusta a lista pra ficar sem espaçamento padrão */
+.container-portfolio ul {
+  margin-left: 20px; /* Espaço da margem só pra deixar a lista alinhada */
+  padding-left: 0;
+}
+
+/* Cada item da lista com espaçamento e fonte confortável */
+.container-portfolio li {
+  margin-bottom: 10px;
+  line-height: 1.5; /* Espaço entre linhas */
+  font-size: 0.95rem;
+}
+
+/* Links dentro dos itens com cor roxa e sem sublinhado */
+.container-portfolio li a {
+  color: #cf4ebc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Cor do link muda quando passa o mouse e*
